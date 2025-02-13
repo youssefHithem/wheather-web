@@ -1,0 +1,139 @@
+/* ==== Global Classes and Variables ==== */
+@font-face {
+  font-family: "rubik";
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+:root {
+  --main-font: "rubik", "montserrat", "san serif";
+  --bgc: #0b131e;
+  --partion-color: #202b3b;
+  --font-color: #9399a2;
+}
+body {
+  font-family: var(--main-font);
+  min-height: 100vh;
+  background-color: var(--bgc);
+  color: #fff;
+}
+ul {
+  margin: 0 !important;
+}
+.partion-color {
+  background-color: var(--partion-color);
+}
+.f-color {
+  color: var(--font-color);
+}
+.padding-partion {
+  padding: 20px 30px;
+}
+li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+li:hover,
+.active-weather {
+  color: #ebeced !important;
+}
+::placeholder {
+  color: var(--font-color) !important;
+}
+/* ==== ============================ ==== */
+.today-forecast {
+  display: block;
+}
+
+.days-forecast-media {
+  display: none;
+}
+
+.form-control {
+  background-color: var(--partion-color) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  /* outline: ; */
+}
+.form-control:focus {
+  border-color: rgba(147, 153, 162, 0.5) !important;
+  box-shadow: none !important;
+}
+.search-bar {
+  width: 75%;
+}
+.text-side div h1 {
+  font-size: 45px;
+  margin: 0;
+}
+.text-side span.currentTemp {
+  font-size: 65px;
+  font-weight: 700;
+}
+img.icon {
+  width: 200px;
+  height: 200px;
+}
+img.today-icon,
+img.days-icon {
+  width: 100px;
+  height: 100px;
+}
+.today-forecast .hour,
+.days-forecast-media .day-media {
+  border-color: var(--font-color) !important;
+}
+.today-forecast h2,
+.air-details h2,
+.days-forecast h2,
+.days-forecast-media h2 {
+  font-size: 14px;
+}
+.days-forecast .day div .icon-day {
+  width: 85px;
+  height: xpx;
+}
+
+.days-forecast .status {
+  font-size: 14px;
+}
+.day {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.drop-down ul {
+  position: absolute;
+  right: 0;
+}
+/* .drop-down */
+/* ==== ============================ ==== */
+@media (max-width: 1200px) {
+  .today-forecast {
+    display: none;
+  }
+  .days-forecast-media {
+    display: block;
+  }
+  .content .days-forecast {
+    display: none !important;
+  }
+  .search-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .tool-list {
+    display: none !important;
+  }
+  .drop-down {
+    display: block !important;
+  }
+  img.icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* ==== ============================ ==== */
